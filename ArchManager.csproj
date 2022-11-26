@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A5134D6-3D5A-4544-834C-538D40DF4636}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>StudentManager</RootNamespace>
+    <AssemblyName>StudentManager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Properties\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\academy\Controller_AddAcademy.cs" />
+    <Compile Include="Controller\academy\Controller_AllAcademy.cs" />
+    <Compile Include="Controller\academy\Controller_ChangeAcademy.cs" />
+    <Compile Include="Controller\academy\Controller_DeleteAcademy.cs" />
+    <Compile Include="Controller\class\Controller_AddClass.cs" />
+    <Compile Include="Controller\class\Controller_AllClass.cs" />
+    <Compile Include="Controller\class\Controller_ChangeClass.cs" />
+    <Compile Include="Controller\class\Controller_DelClass.cs" />
+    <Compile Include="Controller\course\Controller_AddCourse.cs" />
+    <Compile Include="Controller\course\Controller_AllCourse.cs" />
+    <Compile Include="Controller\course\Controller_ChangeCourse.cs" />
+    <Compile Include="Controller\course\Controller_DeleteCourse.cs" />
+    <Compile Include="Controller\course\grades\Controller_AddGrade.cs" />
+    <Compile Include="Controller\course\grades\Controller_AllGrades.cs" />
+    <Compile Include="Controller\course\grades\Controller_ChangeGrade.cs" />
+    <Compile Include="Controller\course\grades\Controller_DelGrade.cs" />
+    <Compile Include="Controller\department\Controller_AddDepartment.cs" />
+    <Compile Include="Controller\department\Controller_AllDepartment.cs" />
+    <Compile Include="Controller\department\Controller_ChangeDepartment.cs" />
+    <Compile Include="Controller\department\Controller_DeleteDepartment.cs" />
+    <Compile Include="Controller\event\Controller_AddEvent.cs" />
+    <Compile Include="Controller\event\Controller_AllEvent.cs" />
+    <Compile Include="Controller\event\Controller_ChangeEvent.cs" />
+    <Compile Include="Controller\event\Controller_DelEvent.cs" />
+    <Compile Include="Controller\major\Controller_AddMajor.cs" />
+    <Compile Include="Controller\major\Controller_AllMajor.cs" />
+    <Compile Include="Controller\major\Controller_ChangeMajor.cs" />
+    <Compile Include="Controller\major\Controller_DeleteMajor.cs" />
+    <Compile Include="View\academy\View_AddAcademy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\academy\View_AddAcademy.Designer.cs">
+      <DependentUpon>View_AddAcademy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\academy\View_AllAcademy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\academy\View_AllAcademy.Designer.cs">
+      <DependentUpon>View_AllAcademy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\academy\View_ChangeAcademy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\academy\View_ChangeAcademy.Designer.cs">
+      <DependentUpon>View_ChangeAcademy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\academy\View_DeleteAcademy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\academy\View_DeleteAcademy.Designer.cs">
+      <DependentUpon>View_DeleteAcademy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\course\grades\View_AddGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\course\grades\View_AddGrade.Designer.cs">
+      <DependentUpon>View_AddGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\course\grades\View_AllGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\course\grades\View_AllGrades.Designer.cs">
+      <DependentUpon>View_AllGrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\course\grades\View_ChangeGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\course\grades\View_ChangeGrade.Designer.cs">
+      <DependentUpon>View_ChangeGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\course\grades\View_DelGrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\course\grades\View_DelGrade.Designer.cs">
+      <DependentUpon>View_DelGrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\class\View_AddClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\class\View_AddClass.Designer.cs">
+      <DependentUpon>View_AddClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\course\View_AddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\course\View_AddCourse.Designer.cs">
+      <DependentUpon>View_AddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\course\View_AllCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\course\View_AllCourse.Designer.cs">
+      <DependentUpon>View_AllCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\stu\Controller_AddStu.cs" />
+    <Compile Include="Controller\stu\Controller_AllStu.cs" />
+    <Compile Include="Controller\sys\Controller_Login.cs" />
+    <Compile Include="Controller\sys\Controller_Main.cs" />
+    <Compile Include="Controller\stu\Controller_ChangeStu.cs" />
+    <Compile Include="Controller\stu\Controller_DeleteStu.cs" />
+    <Compile Include="Controller\user\Controller_AddUser.cs" />
+    <Compile Include="Controller\user\Controller_AllUser.cs" />
+    <Compile Include="Controller\user\Controller_ChangeUser.cs" />
+    <Compile Include="Controller\user\Controller_DeleteUser.cs" />
+    <Compile Include="View\class\View_AllClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\class\View_AllClass.Designer.cs">
+      <DependentUpon>View_AllClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\class\View_ChangeClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\class\View_ChangeClass.Designer.cs">
+      <DependentUpon>View_ChangeClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\class\View_DelClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\class\View_DelClass.Designer.cs">
+      <DependentUpon>View_DelClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\course\View_ChangeCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\course\View_ChangeCourse.Designer.cs">
+      <DependentUpon>View_ChangeCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\course\View_DeleteCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\course\View_DeleteCourse.Designer.cs">
+      <DependentUpon>View_DeleteCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\department\View_AddDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\department\View_AddDepartment.Designer.cs">
+      <DependentUpon>View_AddDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\department\View_AllDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\department\View_AllDepartment.Designer.cs">
+      <DependentUpon>View_AllDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\department\View_ChangeDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\department\View_ChangeDepartment.Designer.cs">
+      <DependentUpon>View_ChangeDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\department\View_DeleteDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\department\View_DeleteDepartment.Designer.cs">
+      <DependentUpon>View_DeleteDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\event\View_AddEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\event\View_AddEvent.Designer.cs">
+      <DependentUpon>View_AddEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\event\View_AllEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\event\View_AllEvent.Designer.cs">
+      <DependentUpon>View_AllEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\event\View_ChangeEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\event\View_ChangeEvent.Designer.cs">
+      <DependentUpon>View_ChangeEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\event\View_DelEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\event\View_DelEvent.Designer.cs">
+      <DependentUpon>View_DelEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\major\View_AddMajor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\major\View_AddMajor.Designer.cs">
+      <DependentUpon>View_AddMajor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\major\View_AllMajor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\major\View_AllMajor.Designer.cs">
+      <DependentUpon>View_AllMajor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\major\View_ChangeMajor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\major\View_ChangeMajor.Designer.cs">
+      <DependentUpon>View_ChangeMajor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\major\View_DeleteMajor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\major\View_DeleteMajor.Designer.cs">
+      <DependentUpon>View_DeleteMajor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\stu\View_AllStu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\stu\View_AllStu.Designer.cs">
+      <DependentUpon>View_AllStu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\stu\View_ChangeStu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\stu\View_ChangeStu.Designer.cs">
+      <DependentUpon>View_ChangeStu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\stu\View_DelStu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\stu\View_DelStu.Designer.cs">
+      <DependentUpon>View_DelStu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\user\View_AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\user\View_AddUser.Designer.cs">
+      <DependentUpon>View_AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\user\View_AllUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\user\View_AllUser.Designer.cs">
+      <DependentUpon>View_AllUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\sys\View_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\sys\View_Main.Designer.cs">
+      <DependentUpon>View_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\sys\View_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\sys\View_Login.Designer.cs">
+      <DependentUpon>View_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\stu\View_AddStu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\stu\View_AddStu.Designer.cs">
+      <DependentUpon>View_AddStu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Poco_Model.cs" />
+    <Compile Include="Utils\MysqlUtils.cs" />
+    <Compile Include="Model\Permissions_Model.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\user\View_ChangeUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\user\View_ChangeUser.Designer.cs">
+      <DependentUpon>View_ChangeUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\user\View_DelUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\user\View_DelUser.Designer.cs">
+      <DependentUpon>View_DelUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\academy\View_AddAcademy.resx">
+      <DependentUpon>View_AddAcademy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\academy\View_AllAcademy.resx">
+      <DependentUpon>View_AllAcademy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\academy\View_ChangeAcademy.resx">
+      <DependentUpon>View_ChangeAcademy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\academy\View_DeleteAcademy.resx">
+      <DependentUpon>View_DeleteAcademy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\class\View_AllClass.resx">
+      <DependentUpon>View_AllClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\course\grades\View_AddGrade.resx">
+      <DependentUpon>View_AddGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\course\grades\View_AllGrades.resx">
+      <DependentUpon>View_AllGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\course\grades\View_ChangeGrade.resx">
+      <DependentUpon>View_ChangeGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\course\grades\View_DelGrade.resx">
+      <DependentUpon>View_DelGrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\class\View_AddClass.resx">
+      <DependentUpon>View_AddClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\course\View_AddCourse.resx">
+      <DependentUpon>View_AddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\course\View_AllCourse.resx">
+      <DependentUpon>View_AllCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\class\View_ChangeClass.resx">
+      <DependentUpon>View_ChangeClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\class\View_DelClass.resx">
+      <DependentUpon>View_DelClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\course\View_ChangeCourse.resx">
+      <DependentUpon>View_ChangeCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\course\View_DeleteCourse.resx">
+      <DependentUpon>View_DeleteCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\department\View_AddDepartment.resx">
+      <DependentUpon>View_AddDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\department\View_AllDepartment.resx">
+      <DependentUpon>View_AllDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\department\View_ChangeDepartment.resx">
+      <DependentUpon>View_ChangeDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\department\View_DeleteDepartment.resx">
+      <DependentUpon>View_DeleteDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\event\View_AddEvent.resx">
+      <DependentUpon>View_AddEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\event\View_AllEvent.resx">
+      <DependentUpon>View_AllEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\event\View_ChangeEvent.resx">
+      <DependentUpon>View_ChangeEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\event\View_DelEvent.resx">
+      <DependentUpon>View_DelEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\major\View_AddMajor.resx">
+      <DependentUpon>View_AddMajor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\major\View_AllMajor.resx">
+      <DependentUpon>View_AllMajor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\major\View_ChangeMajor.resx">
+      <DependentUpon>View_ChangeMajor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\major\View_DeleteMajor.resx">
+      <DependentUpon>View_DeleteMajor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\stu\View_AllStu.resx">
+      <DependentUpon>View_AllStu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\stu\View_ChangeStu.resx">
+      <DependentUpon>View_ChangeStu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\stu\View_DelStu.resx">
+      <DependentUpon>View_DelStu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\user\View_AddUser.resx">
+      <DependentUpon>View_AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\user\View_AllUser.resx">
+      <DependentUpon>View_AllUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\sys\View_Main.resx">
+      <DependentUpon>View_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\sys\View_Login.resx">
+      <DependentUpon>View_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\stu\View_AddStu.resx">
+      <DependentUpon>View_AddStu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\user\View_ChangeUser.resx">
+      <DependentUpon>View_ChangeUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\user\View_DelUser.resx">
+      <DependentUpon>View_DelUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

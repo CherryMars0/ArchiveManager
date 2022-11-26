@@ -1,0 +1,15 @@
+E:\program\.net\source\repo\StudentManager\bin\Debug\StudentManager.exe.config
+E:\program\.net\source\repo\StudentManager\bin\Debug\StudentManager.exe
+E:\program\.net\source\repo\StudentManager\bin\Debug\StudentManager.pdb
+E:\program\.net\source\repo\StudentManager\obj\Debug\StudentManager.csproj.AssemblyReference.cache
+E:\program\.net\source\repo\StudentManager\obj\Debug\StudentManager.csproj.SuggestedBindingRedirects.cache
+E:\program\.net\source\repo\StudentManager\obj\Debug\StudentManager.Properties.Resources.resources
+E:\program\.net\source\repo\StudentManager\obj\Debug\StudentManager.csproj.GenerateResource.cache
+E:\program\.net\source\repo\StudentManager\obj\Debug\StudentManager.csproj.CoreCompileInputs.cache
+E:\program\.net\source\repo\StudentManager\obj\Debug\StudentManager.exe
+E:\program\.net\source\repo\StudentManager\obj\Debug\StudentManager.pdb
+E:\program\.net\source\repo\StudentManager\bin\Debug\MySql.Data.dll
+E:\program\.net\source\repo\StudentManager\obj\Debug\StudentManager.csproj.CopyComplete
+E:\program\.net\source\repo\StudentManager\obj\Debug\StudentManager.Main.resources
+E:\program\.net\source\repo\StudentManager\obj\Debug\StudentManager.Login.resources
+E:\program\.net\source\repo\StudentManager\obj\Debug\StudentManager.AddStu.resources
